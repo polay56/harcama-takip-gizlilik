@@ -1,44 +1,112 @@
-Dil: 
-Türkçe
-Gizlilik Politikası – Harcama Takip
-Son güncelleme: 4 November 2026
-
-Giriş
-Bu politika, Harcama Takip uygulamasının hangi bilgileri kullandığını, bunların nerede işlendiğini ve kullanıcıların nasıl silebileceğini açıklar.
-
-Uygulama içinde saklanan bilgiler
-Girdiğiniz gelir ve gider kayıtları (tutar, tarih, kategori, açıklama, ödeme yöntemi, bütçe ve tekrarlayan işlem bilgileri), kategoriler, uygulama tercihleri ve çöp kutusundaki kayıtlar öncelikle cihazınızdaki uygulama depolama alanında tutulur. Uygulamada kullanıcı hesabı veya geliştirici tarafından işletilen eşitleme sunucusu bulunmaz; uygulama bu kayıtları kendi sunucusuna yüklemez.
-
-Mikrofon ve sesli giriş
-Sesli harcama özelliğini başlattığınızda uygulama, konuşmanızı metne çevirmek için cihazın kullanılabilir konuşma tanıma hizmetini çağırır. Seçili Android konuşma tanıma hizmeti sesinizi veya tanıma isteğini kendi sunucularına gönderebilir. Sağlayıcı ve koşulları cihaz ayarlarınıza bağlıdır. Tanınan metin forma aktarılır; siz kaydedene kadar harcama kaydı oluşturulmaz. Sesli özelliği kullanmayarak bu işlemeyi başlatmayabilirsiniz.
-
-Makbuz ve görsel seçimi
-Makbuzdan veri aktarmak için seçtiğiniz görsel, Google ML Kit Android metin tanıma kütüphanesiyle cihazda işlenir. Uygulama görseli geliştirici sunucusuna yüklemez. İçe aktarmayı onaylamadan önce tanınan alanları kontrol edebilirsiniz. Dosya erişimi Android dosya seçicinin verdiği izinlerle sınırlıdır.
-
-Biyometri ve bildirimler
-Biyometrik doğrulamayı işletim sistemi yapar. Uygulama biyometrik şablonunuza erişmez; yalnızca doğrulama sonucunu alır. Hatırlatma ve bütçe bildirimleri cihazda planlanır ve gösterilir.
-
-Yedekleme ve paylaşım
-Yedekleme veya paylaşımı siz başlattığınızda uygulama seçtiğiniz kayıtları PDF olarak hazırlar. Kaydetme veya paylaşma hedefini siz seçersiniz. Dosyanın sonraki saklanması ve paylaşılması, seçtiğiniz işletim sistemi veya üçüncü taraf uygulamanın koşullarına bağlıdır.
-
-Verilerin paylaşılması ve reklam
-Bu sürümde uygulamanın kendi sunucusu, reklam SDK’sı veya uygulama içi analiz SDK’sı bulunmaz. Bilgileriniz geliştiriciye satılmaz. Sesli girişte seçili konuşma tanıma hizmeti, PDF dışa aktarımında ise seçtiğiniz paylaşım uygulaması devreye girebilir; bu hizmetlerin koşulları kendi sağlayıcılarına aittir.
-
-Saklama ve silme
-Kayıtlarınızı uygulamadan silene, cihaz ayarlarından uygulama verilerini temizleyene veya uygulamayı kaldırana kadar bilgiler cihazda kalır. Dışa aktardığınız yedekleri kaydettiğiniz konumdan ayrıca silmeniz gerekir. İşletim sistemi yedeklemeleri ve konuşma tanıma hizmetinin saklama süreleri ilgili sağlayıcılara bağlıdır.
-
-Güvenlik
-Uygulama verileri cihazın uygulama depolama alanında tutulur. Ekran kilidini etkinleştirmenizi, işletim sistemini güncel tutmanızı ve yedek dosyalarını dikkatle paylaşmanızı öneririz.
-
-Çocukların gizliliği
-Harcama Takip çocuklara yönelik tasarlanmamıştır. Bir çocuğun uygulamayı kullandığını düşünüyorsanız aşağıdaki e-posta adresinden bize ulaşın.
-
-Politika değişiklikleri
-Uygulama özellikleri veya veri işleme biçimleri değişirse bu politika güncellenebilir. Güncel sürüm bu sayfada yayımlanır ve güncelleme tarihi değiştirilir.
-
-Geliştirici / veri sorumlusu
-Uygulama: Harcama Takip
-Geliştirici / veri sorumlusu: Polay Prodüksiyon
-Gizlilik iletişim e-postası: polay1453@gmail.com
-
-Polay Prodüksiyon · polay1453@gmail.com
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Gizlilik Politikası | Harcama Takip</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #202124; background: #f5f7fa; }
+    body { margin: 0; line-height: 1.65; }
+    main { box-sizing: border-box; width: min(860px, 100% - 32px); margin: 36px auto; padding: 32px clamp(20px, 5vw, 48px); background: #fff; border-radius: 16px; box-shadow: 0 4px 24px #172b4d12; }
+    h1, h2 { line-height: 1.25; color: #173b35; }
+    h1 { margin-top: 0; }
+    h2 { margin-top: 30px; font-size: 1.2rem; }
+    .language { display:flex; justify-content:flex-end; margin-bottom:18px; }
+    select { font:inherit; padding:8px; border:1px solid #ccd2d8; border-radius:8px; background:white; }
+    .contact { overflow-wrap:anywhere; }
+    footer { margin-top:36px; color:#5f6368; font-size:.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="language"><label><span id="language-label">Dil / Language</span>: <select id="language" aria-label="Language">
+    <option value="tr">Türkçe</option><option value="en">English</option><option value="ar">العربية</option><option value="hi">हिन्दी</option>
+  </select></label></div>
+  <div id="policy"></div>
+</main>
+<script>
+const email = '<a href="mailto:polay1453@gmail.com">polay1453@gmail.com</a>';
+const policies = {
+tr: {
+  title:'Gizlilik Politikası – Harcama Takip', updated:'Son güncelleme', sections:[
+    ['Giriş','Bu politika, Harcama Takip uygulamasının hangi bilgileri kullandığını, bunların nerede işlendiğini ve kullanıcıların nasıl silebileceğini açıklar.'],
+    ['Uygulama içinde saklanan bilgiler','Girdiğiniz gelir ve gider kayıtları (tutar, tarih, kategori, açıklama, ödeme yöntemi, bütçe ve tekrarlayan işlem bilgileri), kategoriler, uygulama tercihleri ve çöp kutusundaki kayıtlar öncelikle cihazınızdaki uygulama depolama alanında tutulur. Uygulamada kullanıcı hesabı veya geliştirici tarafından işletilen eşitleme sunucusu bulunmaz; uygulama bu kayıtları kendi sunucusuna yüklemez.'],
+    ['Mikrofon ve sesli giriş','Sesli harcama özelliğini başlattığınızda uygulama, konuşmanızı metne çevirmek için cihazın kullanılabilir konuşma tanıma hizmetini çağırır. Seçili Android konuşma tanıma hizmeti sesinizi veya tanıma isteğini kendi sunucularına gönderebilir. Sağlayıcı ve koşulları cihaz ayarlarınıza bağlıdır. Tanınan metin forma aktarılır; siz kaydedene kadar harcama kaydı oluşturulmaz. Sesli özelliği kullanmayarak bu işlemeyi başlatmayabilirsiniz.'],
+    ['Makbuz ve görsel seçimi','Makbuzdan veri aktarmak için seçtiğiniz görsel, Google ML Kit Android metin tanıma kütüphanesiyle cihazda işlenir. Uygulama görseli geliştirici sunucusuna yüklemez. İçe aktarmayı onaylamadan önce tanınan alanları kontrol edebilirsiniz. Dosya erişimi Android dosya seçicinin verdiği izinlerle sınırlıdır.'],
+    ['Biyometri ve bildirimler','Biyometrik doğrulamayı işletim sistemi yapar. Uygulama biyometrik şablonunuza erişmez; yalnızca doğrulama sonucunu alır. Hatırlatma ve bütçe bildirimleri cihazda planlanır ve gösterilir.'],
+    ['Yedekleme ve paylaşım','Yedekleme veya paylaşımı siz başlattığınızda uygulama seçtiğiniz kayıtları PDF olarak hazırlar. Kaydetme veya paylaşma hedefini siz seçersiniz. Dosyanın sonraki saklanması ve paylaşılması, seçtiğiniz işletim sistemi veya üçüncü taraf uygulamanın koşullarına bağlıdır.'],
+    ['Verilerin paylaşılması ve reklam','Bu sürümde uygulamanın kendi sunucusu, reklam SDK’sı veya uygulama içi analiz SDK’sı bulunmaz. Bilgileriniz geliştiriciye satılmaz. Sesli girişte seçili konuşma tanıma hizmeti, PDF dışa aktarımında ise seçtiğiniz paylaşım uygulaması devreye girebilir; bu hizmetlerin koşulları kendi sağlayıcılarına aittir.'],
+    ['Saklama ve silme','Kayıtlarınızı uygulamadan silene, cihaz ayarlarından uygulama verilerini temizleyene veya uygulamayı kaldırana kadar bilgiler cihazda kalır. Dışa aktardığınız yedekleri kaydettiğiniz konumdan ayrıca silmeniz gerekir. İşletim sistemi yedeklemeleri ve konuşma tanıma hizmetinin saklama süreleri ilgili sağlayıcılara bağlıdır.'],
+    ['Güvenlik','Uygulama verileri cihazın uygulama depolama alanında tutulur. Ekran kilidini etkinleştirmenizi, işletim sistemini güncel tutmanızı ve yedek dosyalarını dikkatle paylaşmanızı öneririz.'],
+    ['Çocukların gizliliği','Harcama Takip çocuklara yönelik tasarlanmamıştır. Bir çocuğun uygulamayı kullandığını düşünüyorsanız aşağıdaki e-posta adresinden bize ulaşın.'],
+    ['Politika değişiklikleri','Uygulama özellikleri veya veri işleme biçimleri değişirse bu politika güncellenebilir. Güncel sürüm bu sayfada yayımlanır ve güncelleme tarihi değiştirilir.']
+  ], developer:'Geliştirici / veri sorumlusu', contact:'Gizlilik iletişim e-postası', footer:'Uygulama: Harcama Takip'
+},
+en: {
+  title:'Privacy Policy – Expense Tracker', updated:'Last updated', sections:[
+    ['Introduction','This policy explains what information the Expense Tracker app uses, where it is processed, and how you can delete it.'],
+    ['Information stored in the app','Your income and expense entries (amount, date, category, description, payment method, budget and recurring transaction details), categories, app preferences and items in the recycle bin are primarily stored in the app storage on your device. The app has no user account or developer-operated synchronization server, and does not upload these records to its own server.'],
+    ['Microphone and voice input','When you start the voice expense feature, the app calls the speech recognition service available on your device to convert speech to text. The selected Android speech recognition service may send your audio or recognition request to its own servers. The provider and its terms depend on your device settings. Recognized text is placed in the form; no expense entry is created until you save it. You can avoid this processing by not using voice input.'],
+    ['Receipts and image selection','An image you select to import receipt data is processed on your device using Google ML Kit’s Android text recognition library. The app does not upload the image to a developer server. You can review recognized fields before confirming the import. File access is limited to permissions provided by Android’s file picker.'],
+    ['Biometrics and notifications','The operating system performs biometric authentication. The app cannot access your biometric template and receives only the authentication result. Reminders and budget notifications are scheduled and displayed on your device.'],
+    ['Backups and sharing','When you initiate a backup or sharing action, the app prepares the selected records as a PDF. You choose where to save or share it. Further storage and sharing are subject to the operating system or third-party app you choose.'],
+    ['Sharing and advertising','This version has no app-operated server, advertising SDK, or in-app analytics SDK. Your information is not sold to the developer. Voice input may involve your selected speech recognition service, and PDF export may involve the sharing app you select; their processing is governed by their providers.'],
+    ['Retention and deletion','Your information remains on your device until you delete records in the app, clear the app data in device settings, or uninstall the app. You must separately delete exported backups from where you saved them. Operating-system backups and speech-service retention are governed by the relevant providers.'],
+    ['Security','App data is stored in the app storage on your device. We recommend enabling a screen lock, keeping your operating system up to date, and sharing backup files carefully.'],
+    ['Children’s privacy','Expense Tracker is not designed for children. If you believe a child has used the app, contact us at the email address below.'],
+    ['Policy changes','This policy may be updated if app features or data practices change. The current version will be published on this page with an updated date.']
+  ], developer:'Developer / data controller', contact:'Privacy contact email', footer:'App: Expense Tracker'
+},
+ar: {
+  title:'سياسة الخصوصية – متتبع المصروفات', updated:'آخر تحديث', sections:[
+    ['مقدمة','توضح هذه السياسة المعلومات التي يستخدمها تطبيق متتبع المصروفات، ومكان معالجتها، وكيفية حذفها.'],
+    ['المعلومات المحفوظة داخل التطبيق','تُحفظ سجلات الدخل والمصروفات التي تدخلها (المبلغ والتاريخ والفئة والوصف وطريقة الدفع والميزانية وتفاصيل المعاملات المتكررة)، والفئات وتفضيلات التطبيق والعناصر في سلة المحذوفات، بشكل أساسي في مساحة تخزين التطبيق على جهازك. لا يحتوي التطبيق على حساب مستخدم أو خادم مزامنة يديره المطور، ولا يرفع هذه السجلات إلى خادمه.'],
+    ['الميكروفون والإدخال الصوتي','عند بدء ميزة المصروفات الصوتية، يستدعي التطبيق خدمة التعرف على الكلام المتاحة على جهازك لتحويل الكلام إلى نص. قد ترسل خدمة التعرف على الكلام المحددة في Android الصوت أو طلب التعرف إلى خوادمها. يعتمد مزود الخدمة وشروطه على إعدادات جهازك. يُنقل النص المتعرف عليه إلى النموذج، ولا يُنشأ سجل مصروفات حتى تحفظه. يمكنك تجنب هذه المعالجة بعدم استخدام الإدخال الصوتي.'],
+    ['الإيصالات واختيار الصور','تُعالج الصورة التي تختارها لاستيراد بيانات الإيصال على جهازك باستخدام مكتبة التعرف على النصوص لنظام Android من Google ML Kit. لا يرفع التطبيق الصورة إلى خادم المطور. يمكنك مراجعة الحقول المتعرف عليها قبل تأكيد الاستيراد. يقتصر الوصول إلى الملفات على الأذونات التي يوفرها منتقي الملفات في Android.'],
+    ['القياسات الحيوية والإشعارات','يتولى نظام التشغيل التحقق من القياسات الحيوية. لا يستطيع التطبيق الوصول إلى قالبك الحيوي، ويتلقى نتيجة التحقق فقط. تُجدول التذكيرات وإشعارات الميزانية وتُعرض على جهازك.'],
+    ['النسخ الاحتياطي والمشاركة','عند بدء النسخ الاحتياطي أو المشاركة، يُعد التطبيق السجلات التي تختارها في ملف PDF. تختار بنفسك مكان حفظ الملف أو مشاركته. يخضع التخزين والمشاركة لاحقًا لشروط نظام التشغيل أو تطبيق الطرف الثالث الذي تختاره.'],
+    ['مشاركة البيانات والإعلانات','لا يتضمن هذا الإصدار خادمًا يديره التطبيق أو حزمة إعلانات أو حزمة تحليلات داخل التطبيق. لا تُباع معلوماتك للمطور. قد يستخدم الإدخال الصوتي خدمة التعرف على الكلام التي اخترتها، وقد يستخدم تصدير PDF تطبيق المشاركة الذي تحدده؛ وتخضع معالجة هذه الخدمات لشروط مزوديها.'],
+    ['الاحتفاظ بالبيانات وحذفها','تبقى معلوماتك على جهازك حتى تحذف السجلات من التطبيق، أو تمسح بياناته من إعدادات الجهاز، أو تزيل التطبيق. عليك حذف النسخ الاحتياطية المصدرة بشكل منفصل من المكان الذي حفظتها فيه. تخضع النسخ الاحتياطية لنظام التشغيل وفترات الاحتفاظ لدى خدمة الكلام لمزوديها المعنيين.'],
+    ['الأمان','تُحفظ بيانات التطبيق في مساحة تخزين التطبيق على جهازك. نوصي بتفعيل قفل الشاشة، وتحديث نظام التشغيل، ومشاركة ملفات النسخ الاحتياطي بحذر.'],
+    ['خصوصية الأطفال','لم يُصمم متتبع المصروفات للأطفال. إذا كنت تعتقد أن طفلًا استخدم التطبيق، فتواصل معنا عبر البريد الإلكتروني أدناه.'],
+    ['تغييرات السياسة','قد تُحدّث هذه السياسة عند تغيير ميزات التطبيق أو ممارسات معالجة البيانات. ستُنشر النسخة الحالية على هذه الصفحة مع تحديث التاريخ.']
+  ], developer:'المطور / مسؤول البيانات', contact:'البريد الإلكتروني للتواصل بشأن الخصوصية', footer:'التطبيق: متتبع المصروفات'
+},
+hi: {
+  title:'गोपनीयता नीति – व्यय ट्रैकर', updated:'अंतिम अपडेट', sections:[
+    ['परिचय','यह नीति बताती है कि व्यय ट्रैकर ऐप कौन-सी जानकारी इस्तेमाल करता है, उसे कहाँ संसाधित किया जाता है और आप उसे कैसे हटा सकते हैं।'],
+    ['ऐप में संग्रहीत जानकारी','आपकी आय और खर्च की प्रविष्टियाँ (राशि, तारीख, श्रेणी, विवरण, भुगतान का तरीका, बजट और आवर्ती लेन-देन की जानकारी), श्रेणियाँ, ऐप प्राथमिकताएँ और रीसायकल बिन की वस्तुएँ मुख्य रूप से आपके डिवाइस के ऐप स्टोरेज में रखी जाती हैं। ऐप में उपयोगकर्ता खाता या डेवलपर द्वारा संचालित सिंक सर्वर नहीं है और यह इन रिकॉर्ड को अपने सर्वर पर अपलोड नहीं करता।'],
+    ['माइक्रोफ़ोन और वॉइस इनपुट','जब आप वॉइस खर्च सुविधा शुरू करते हैं, तो ऐप आवाज़ को टेक्स्ट में बदलने के लिए डिवाइस पर उपलब्ध स्पीच रिकग्निशन सेवा का उपयोग करता है। चुनी हुई Android सेवा आपकी आवाज़ या पहचान अनुरोध अपने सर्वर पर भेज सकती है। सेवा प्रदाता और उसकी शर्तें डिवाइस सेटिंग पर निर्भर करती हैं। पहचाना गया टेक्स्ट फ़ॉर्म में डाला जाता है; आपके सेव करने तक खर्च रिकॉर्ड नहीं बनता। वॉइस इनपुट का उपयोग न करके आप इस प्रक्रिया से बच सकते हैं।'],
+    ['रसीद और छवि चयन','रसीद की जानकारी आयात करने के लिए आपके द्वारा चुनी गई छवि को Google ML Kit की Android टेक्स्ट पहचान लाइब्रेरी से डिवाइस पर संसाधित किया जाता है। ऐप छवि को डेवलपर सर्वर पर अपलोड नहीं करता। आयात की पुष्टि से पहले आप पहचाने गए फ़ील्ड जाँच सकते हैं। फ़ाइल पहुँच Android फ़ाइल पिकर द्वारा दिए गए अनुमतियों तक सीमित है।'],
+    ['बायोमेट्रिक्स और सूचनाएँ','बायोमेट्रिक प्रमाणीकरण ऑपरेटिंग सिस्टम करता है। ऐप आपके बायोमेट्रिक टेम्पलेट तक नहीं पहुँच सकता और केवल प्रमाणीकरण का परिणाम प्राप्त करता है। रिमाइंडर और बजट सूचनाएँ आपके डिवाइस पर शेड्यूल और प्रदर्शित होती हैं।'],
+    ['बैकअप और साझा करना','जब आप बैकअप या साझा करने की प्रक्रिया शुरू करते हैं, तो ऐप चुने हुए रिकॉर्ड की PDF तैयार करता है। इसे कहाँ सहेजना या साझा करना है, यह आप चुनते हैं। आगे का संग्रहण और साझा करना आपके चुने हुए ऑपरेटिंग सिस्टम या तीसरे पक्ष के ऐप की शर्तों के अधीन है।'],
+    ['जानकारी साझा करना और विज्ञापन','इस संस्करण में ऐप का अपना सर्वर, विज्ञापन SDK या ऐप के अंदर विश्लेषण SDK नहीं है। आपकी जानकारी डेवलपर को बेची नहीं जाती। वॉइस इनपुट में चुनी हुई स्पीच सेवा और PDF निर्यात में आपके चुने हुए शेयरिंग ऐप का उपयोग हो सकता है; उनकी प्रक्रिया उनके प्रदाताओं की शर्तों से नियंत्रित होती है।'],
+    ['जानकारी रखना और हटाना','आपकी जानकारी डिवाइस पर तब तक रहती है जब तक आप ऐप से रिकॉर्ड न हटाएँ, डिवाइस सेटिंग से ऐप डेटा साफ़ न करें या ऐप अनइंस्टॉल न करें। निर्यात किए गए बैकअप को उस स्थान से अलग से हटाना होगा जहाँ आपने उसे सहेजा है। ऑपरेटिंग सिस्टम बैकअप और स्पीच सेवा की जानकारी रखने की अवधि संबंधित प्रदाताओं की शर्तों के अधीन है।'],
+    ['सुरक्षा','ऐप डेटा आपके डिवाइस के ऐप स्टोरेज में रखा जाता है। हम स्क्रीन लॉक चालू रखने, ऑपरेटिंग सिस्टम अपडेट करने और बैकअप फ़ाइलें सावधानी से साझा करने की सलाह देते हैं।'],
+    ['बच्चों की गोपनीयता','व्यय ट्रैकर बच्चों के लिए डिज़ाइन नहीं किया गया है। यदि आपको लगता है कि किसी बच्चे ने ऐप का उपयोग किया है, तो नीचे दिए ईमेल पर हमसे संपर्क करें।'],
+    ['नीति में बदलाव','ऐप की सुविधाओं या डेटा संसाधन के तरीकों में बदलाव होने पर यह नीति अपडेट की जा सकती है। वर्तमान संस्करण इस पेज पर अपडेट की तारीख के साथ प्रकाशित होगा।']
+  ], developer:'डेवलपर / डेटा नियंत्रक', contact:'गोपनीयता संपर्क ईमेल', footer:'ऐप: व्यय ट्रैकर'
+}
+};
+function renderPolicy(language) {
+  const p = policies[language] || policies.tr;
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+  document.title = p.title;
+  document.getElementById('language').value = language;
+  document.getElementById('language-label').textContent = language === 'tr' ? 'Dil' : language === 'ar' ? 'اللغة' : language === 'hi' ? 'भाषा' : 'Language';
+  document.getElementById('policy').innerHTML = `<h1>${p.title}</h1><p><strong>${p.updated}:</strong> 4 November 2026</p>${p.sections.map(([heading,body])=>`<h2>${heading}</h2><p>${body}</p>`).join('')}<h2>${p.developer}</h2><p class="contact">${p.footer}<br><strong>${p.developer}:</strong> Polay Prodüksiyon<br><strong>${p.contact}:</strong> ${email}</p><footer>Polay Prodüksiyon · ${email}</footer>`;
+}
+const params = new URLSearchParams(location.search);
+const initialLanguage = params.get('lang') || 'tr';
+renderPolicy(initialLanguage);
+document.getElementById('language').addEventListener('change', event => {
+  const url = new URL(location.href);
+  url.searchParams.set('lang', event.target.value);
+  history.replaceState({}, '', url);
+  renderPolicy(event.target.value);
+});
+</script>
+</body>
+</html>
